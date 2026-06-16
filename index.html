@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SehatDaring - Stop Cyberbullying</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#E0F2FE', // Pastel blue - menenangkan
+                        secondary: '#0284C7', // Biru agak gelap untuk teks/aksen
+                        darkBlue: '#0F172A', // Biru gelap untuk footer
+                        accent: '#F59E0B', // Amber/Oranye untuk tombol/CTA
+                        accentHover: '#D97706',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile menu smooth transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-primary text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-secondary flex items-center gap-2">
+                        <i class="fa-solid fa-shield-heart text-accent"></i> SehatDaring
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#edukasi" class="text-gray-600 hover:text-secondary font-medium transition duration-200">Edukasi</a>
+                    <a href="#dampak" class="text-gray-600 hover:text-secondary font-medium transition duration-200">Dampak</a>
+                    <a href="#solusi" class="text-gray-600 hover:text-secondary font-medium transition duration-200">Solusi</a>
+                    <a href="#bantuan" class="text-gray-600 hover:text-secondary font-medium transition duration-200">Bantuan</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-secondary focus:outline-none" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 shadow-md">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#edukasi" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-primary/50 transition">Edukasi</a>
+                <a href="#dampak" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-primary/50 transition">Dampak</a>
+                <a href="#solusi" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-primary/50 transition">Solusi</a>
+                <a href="#bantuan" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-primary/50 transition">Bantuan</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 min-h-[90vh]">
+        <div class="md:w-1/2 reveal">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-secondary font-semibold text-sm mb-6 shadow-sm border border-blue-200">
+                Gerakan Masyarakat Peduli Internet
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-darkBlue leading-tight mb-6">
+                Stop Cyberbullying,<br/> 
+                <span class="text-secondary">Ciptakan Internet Positif</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
+                Ruang digital seharusnya menjadi tempat yang aman untuk belajar, berkarya, dan berbagi. Mari bersama-sama kita hentikan perundungan siber dan saling mendukung.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#bantuan" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-bold rounded-full shadow-lg text-white bg-accent hover:bg-accentHover hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                    Cari Bantuan Sekarang
+                </a>
+                <a href="#edukasi" class="inline-flex justify-center items-center px-8 py-3.5 border-2 border-secondary text-base font-bold rounded-full text-secondary bg-transparent hover:bg-secondary hover:text-white transition-all duration-300">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 reveal delay-200 w-full">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sekelompok pelajar tersenyum bersama" class="rounded-3xl shadow-2xl object-cover h-64 md:h-96 w-full ring-4 ring-white" />
+        </div>
+    </section>
+
+    <!-- Edukasi Section -->
+    <section id="edukasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkBlue mb-4">Kenali Bentuk Cyberbullying</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Mengetahui apa itu cyberbullying adalah langkah pertama untuk mencegahnya. Berikut adalah beberapa bentuk perundungan siber yang sering terjadi pada pelajar.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-primary/30 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-blue-100 reveal delay-100">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 shadow-md transform rotate-3">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-darkBlue">Doxing</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Menyebarkan informasi pribadi, data sensitif, atau identitas seseorang di internet tanpa izin untuk tujuan mempermalukan atau mengancam.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-primary/30 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-blue-100 reveal delay-200">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 shadow-md transform -rotate-3">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-darkBlue">Harassment</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Mengirimkan pesan ancaman, hinaan, ejekan atau gangguan secara terus-menerus melalui media sosial atau aplikasi chat.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-primary/30 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-blue-100 reveal delay-300">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 shadow-md transform rotate-3">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-darkBlue">Flaming</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Perang kata-kata di dunia maya berupa komentar kasar, vulgar, atau penuh amarah yang ditujukan kepada seseorang di grup kelas atau forum.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-primary/30 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-blue-100 reveal delay-400">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 shadow-md transform -rotate-3">
+                        <i class="fa-solid fa-binoculars"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-darkBlue">Cyberstalking</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Menguntit, memantau secara obsesif, dan melakukan intimidasi online yang membuat korban merasa tidak aman di kehidupan nyata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dampak Section -->
+    <section id="dampak" class="py-20 bg-gradient-to-b from-primary/10 to-primary/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-darkBlue mb-6">Dampak Nyata Cyberbullying</h2>
+                    <p class="text-gray-600 mb-10 text-lg leading-relaxed">Perundungan siber bukan sekadar "candaan". Ia memiliki dampak psikologis, emosional, dan akademis yang sangat serius bagi korban.</p>
+                    
+                    <ul class="space-y-8">
+                        <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-50 rounded-full flex items-center justify-center text-red-500 mt-1">
+                                <i class="fa-solid fa-brain text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-darkBlue">Kesehatan Mental Menurun</h4>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Memicu stres berkepanjangan, depresi, kecemasan berlebih (anxiety), hingga hilangnya rasa percaya diri dan harga diri.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="flex-shrink-0 w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-amber-500 mt-1">
+                                <i class="fa-solid fa-graduation-cap text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-darkBlue">Penurunan Prestasi Akademis</h4>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Korban sering kali sulit berkonsentrasi belajar, sering bolos sekolah karena takut atau malu, hingga nilai yang turun drastis.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-secondary mt-1">
+                                <i class="fa-solid fa-users-slash text-xl"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h4 class="text-xl font-bold text-darkBlue">Isolasi Sosial</h4>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Cenderung menarik diri dari keluarga, guru, dan teman-teman, serta enggan mengikuti kegiatan ekstrakurikuler.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 reveal delay-200 w-full relative">
+                    <!-- Blob background decorative -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1542887800-faca0261c9e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pelajar merasa sedih dan tertekan melihat handphone" class="rounded-3xl shadow-xl object-cover h-[500px] w-full" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solusi Section -->
+    <section id="solusi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkBlue mb-4">Apa yang Harus Dilakukan?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Jangan diam. Jika kamu menjadi korban atau melihat temanmu mengalami cyberbullying, lakukan 3 langkah penting ini dengan berani.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+                <!-- Decorative dashed line -->
+                <div class="hidden md:block absolute top-12 left-[10%] w-[80%] h-0 border-t-2 border-dashed border-gray-300 -z-10"></div>
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 text-center reveal delay-100 relative pt-12">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center text-3xl font-extrabold shadow-lg border-4 border-white">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-darkBlue mt-2">Block & Ignore</h3>
+                    <p class="text-gray-600 leading-relaxed">Jangan merespons pesan provokatif mereka. Segera <span class="font-semibold text-secondary">blokir akun pelaku</span> di semua platform agar mereka tidak bisa menjangkau dan menyakitimu lagi.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 text-center reveal delay-200 relative pt-12 mt-12 md:mt-0">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center text-3xl font-extrabold shadow-lg border-4 border-white">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-darkBlue mt-2">Save Evidence</h3>
+                    <p class="text-gray-600 leading-relaxed"><span class="font-semibold text-secondary">Simpan bukti kuat.</span> Lakukan screenshot atau rekam layar (screen record) pesan, komentar, atau postingan jahat tersebut sebelum dihapus oleh pelaku.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 text-center reveal delay-300 relative pt-12 mt-12 md:mt-0">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center text-3xl font-extrabold shadow-lg border-4 border-white">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-darkBlue mt-2">Speak Up!</h3>
+                    <p class="text-gray-600 leading-relaxed"><span class="font-semibold text-secondary">Ceritakan segera.</span> Laporkan ke orang yang kamu percaya: Orang tua, guru BK di sekolah, atau pihak berwajib. Kamu tidak sendirian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bantuan Section -->
+    <section id="bantuan" class="py-20 bg-primary/50 relative overflow-hidden">
+        <!-- Abstract shape -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center reveal mb-16">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6 shadow-sm text-accent text-3xl">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-darkBlue mb-4">Butuh Tempat Bercerita? Kami Ada.</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Jangan ragu mencari bantuan profesional jika kamu merasa terancam atau tertekan. Semua cerita dan privasimu dijamin kerahasiaannya.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Bantuan Sekolah -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition flex items-start gap-6 reveal delay-100 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 text-secondary rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-darkBlue mb-2">Konseling Sekolah (Guru BK)</h3>
+                        <p class="text-gray-600 text-sm mb-5">Layanan konseling khusus untuk pelajar di lingkungan sekolah. Pendekatan ramah dan suportif.</p>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-bold text-darkBlue flex items-center"><i class="fa-solid fa-phone w-5 text-secondary"></i> 0800-123-4567 (Bebas Pulsa)</span>
+                            <span class="text-sm text-gray-500 flex items-center"><i class="fa-regular fa-clock w-5"></i> Senin - Jumat, 08:00 - 15:00 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotline Anak -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition flex items-start gap-6 reveal delay-200 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-darkBlue mb-2">Hotline SAPA Anak</h3>
+                        <p class="text-gray-600 text-sm mb-5">Layanan pengaduan dan darurat resmi untuk laporan kekerasan anak dan remaja di internet.</p>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-bold text-darkBlue flex items-center"><i class="fa-solid fa-phone w-5 text-accent"></i> 129 (SAPA 129)</span>
+                            <span class="text-sm text-gray-500 flex items-center"><i class="fa-solid fa-bolt w-5"></i> Layanan Darurat 24 Jam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div class="mt-16 text-center reveal delay-300 bg-white p-10 rounded-3xl shadow-md max-w-4xl mx-auto border border-gray-100">
+                <h3 class="text-2xl font-bold text-darkBlue mb-3">Lebih nyaman chat secara anonim?</h3>
+                <p class="text-gray-600 mb-8">Tim relawan konselor kami siap mendengarkan ceritamu via chat WhatsApp.</p>
+                <a href="https://wa.me/628000000000" target="_blank" class="inline-flex justify-center items-center gap-3 px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-[#25D366] hover:bg-[#1EBE59] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Konsultasi Via WhatsApp
+                </a>
+                <p class="mt-5 text-xs text-gray-400 font-medium">*Nomor kontak dan tautan di atas bersifat fiktif/placeholder untuk keperluan purwarupa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBlue text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-1">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-shield-heart text-accent"></i> SehatDaring
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Platform edukasi dan kampanye masyarakat yang berdedikasi untuk menciptakan lingkungan internet yang positif, aman, dan bebas dari cyberbullying.
+                    </p>
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <span class="sr-only">Twitter / X</span>
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#edukasi" class="text-sm hover:text-white hover:underline transition">Apa itu Cyberbullying?</a></li>
+                        <li><a href="#dampak" class="text-sm hover:text-white hover:underline transition">Dampak Kesehatan Mental</a></li>
+                        <li><a href="#solusi" class="text-sm hover:text-white hover:underline transition">Panduan Keamanan Digital</a></li>
+                        <li><a href="#bantuan" class="text-sm hover:text-white hover:underline transition">Layanan Pengaduan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-sm">
+                            <i class="fa-solid fa-location-dot mt-1 text-gray-500"></i>
+                            <span>Jl. Edukasi Digital No. 12<br/>Jakarta Selatan, Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fa-solid fa-envelope text-gray-500"></i>
+                            <a href="mailto:halo@sehatdaring.id" class="hover:text-white transition">halo@sehatdaring.id</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-center md:text-left">
+                    &copy; 2026 Kampanye Anti-Cyberbullying <span class="text-white font-semibold">SehatDaring</span>. Hak Cipta Dilindungi.
+                </p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- Mobile Menu Logic ---
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            if (menu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Tutup menu saat link diklik (mobile)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // --- Navbar Shadow on Scroll ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+
+        // --- Scroll Reveal Animation Logic ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                // Elemen dianggap terlihat jika bagian atasnya berjarak sekian px dari bawah layar
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50; 
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        // Panggil saat scroll dan saat load pertama kali
+        window.addEventListener("scroll", reveal);
+        document.addEventListener("DOMContentLoaded", reveal);
+    </script>
+</body>
+</html>
