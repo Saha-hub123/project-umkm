@@ -1,0 +1,6 @@
+# Kumpulan Project UMKM
+
+Repositori ini berisi beberapa project website umkm sederhana. Berikut adalah daftar website yang bisa diakses:
+
+- 🥤: [Website Cendol UMKM](https://cendol-sipoer.netlify.app/)
+- 🏪 [Website Sembako Teh Dewi](https://sembako-tehdewi.netlify.app/)
