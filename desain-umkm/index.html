@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KreasiVisual | Jasa Desain Grafis UMKM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">KreasiVisual.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#etalase">Etalase</a></li>
+                <li><a href="#pesan">Pesan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Tingkatkan Kelas <span>UMKM</span> Anda</h1>
+        <p>Hadirkan identitas visual yang profesional dan memukau. Dari logo hingga kemasan, kami siap membantu UMKM Anda tampil beda dan menarik pelanggan.</p>
+        <a href="#etalase" class="btn">Lihat Portofolio</a>
+    </section>
+
+    <section id="etalase" class="showcase">
+        <h2 class="section-title">Etalase Desain Kami</h2>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="logo">Logo</button>
+            <button class="filter-btn" data-filter="sosmed">Sosial Media</button>
+            <button class="filter-btn" data-filter="banner">Banner</button>
+            <button class="filter-btn" data-filter="kemasan">Kemasan</button>
+        </div>
+
+        <div class="gallery">
+            <div class="card" data-category="logo">
+                <img src="assets/logo_design.png" alt="Logo Design" class="card-img">
+                <div class="card-body">
+                    <div class="card-category">Logo</div>
+                    <h3 class="card-title">Modern Minimalist Logo</h3>
+                </div>
+            </div>
+
+            <div class="card" data-category="sosmed">
+                <img src="assets/social_post.png" alt="Social Media Post" class="card-img">
+                <div class="card-body">
+                    <div class="card-category">Sosial Media</div>
+                    <h3 class="card-title">Promo Produk & Kuliner</h3>
+                </div>
+            </div>
+
+            <div class="card" data-category="kemasan">
+                <img src="assets/packaging_design.png" alt="Packaging Design" class="card-img">
+                <div class="card-body">
+                    <div class="card-category">Kemasan</div>
+                    <h3 class="card-title">Kemasan Snack Premium</h3>
+                </div>
+            </div>
+
+            <div class="card" data-category="banner">
+                <img src="assets/banner_design.png" alt="Banner Design" class="card-img">
+                <div class="card-body">
+                    <div class="card-category">Banner</div>
+                    <h3 class="card-title">Banner Promosi & Event</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesan" class="order-section">
+        <h2 class="section-title">Pesan Desain Sekarang</h2>
+        <div class="form-container">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="nama">Nama / Nama Usaha Anda</label>
+                    <input type="text" id="nama" class="form-control" required placeholder="Contoh: Kedai Kopi Senja">
+                </div>
+                
+                <div class="form-group">
+                    <label for="kategori">Kategori Layanan</label>
+                    <select id="kategori" class="form-control" required>
+                        <option value="" disabled selected>Pilih Layanan</option>
+                        <option value="Pembuatan Logo">Pembuatan Logo</option>
+                        <option value="Desain Sosial Media">Desain Sosial Media</option>
+                        <option value="Desain Kemasan">Desain Kemasan</option>
+                        <option value="Desain Banner/Spanduk">Desain Banner/Spanduk</option>
+                        <option value="Lainnya">Lainnya (Jelaskan di deskripsi)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi Kebutuhan</label>
+                    <textarea id="deskripsi" class="form-control" required placeholder="Ceritakan gaya desain yang Anda inginkan, target pasar, teks yang ingin dimasukkan, atau detail lainnya..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-full">Kirim via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 KreasiVisual. Solusi Desain UMKM Nusantara.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
