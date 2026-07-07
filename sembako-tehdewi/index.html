@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sembako Teh Dewi | Belanja Cepat & Mudah</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>📍 Jl. Raya Sembako No. 123</span>
+                <span class="hide-mobile">⏰ Buka: 07:00 - 21:00</span>
+            </div>
+            <div class="top-bar-right">
+                <span>📞 WA: +62 812-3456-7890</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🏪</span>
+                Toko Sembako <span class="highlight">Teh Dewi</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home">Beranda</a>
+                <a href="#etalase">Etalase</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari barang...">
+                </div>
+
+                <div class="cart-icon" id="cartBtn">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <span class="hero-badge">Promo Spesial Bulan Ini! 💥</span>
+                <h1>Belanja Bulanan Lebih Hemat di <span class="highlight">Teh Dewi</span></h1>
+                <p>Temukan berbagai kebutuhan sembako, minuman segar, hingga cemilan favorit keluarga dengan harga grosir termurah di kota Anda. Pesan sekarang, kami siapkan seketika!</p>
+                <a href="#etalase" class="btn-primary">Mulai Belanja</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://i0.wp.com/pintardiscover.wpcomstaging.com/wp-content/uploads/2025/09/warung_sembako.jpg?fit=864%2C576&ssl=1" alt="Toko Sembako Lengkap">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Etalase) -->
+    <main id="etalase" class="main-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Katalog Produk Kami</h2>
+                <p>Temukan barang yang Anda butuhkan dengan cepat menggunakan kategori di bawah ini.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-btn active" data-filter="semua">Semua Barang</button>
+                <button class="filter-btn" data-filter="sembako">Sembako Utama</button>
+                <button class="filter-btn" data-filter="minuman">Minuman</button>
+                <button class="filter-btn" data-filter="cemilan">Cemilan & Coklat</button>
+                <button class="filter-btn" data-filter="kopi-teh">Kopi & Teh</button>
+                <button class="filter-btn" data-filter="rokok">Rokok</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                
+                <!-- Item 1 -->
+                <div class="product-card" data-category="sembako">
+                    <img src="assets/123035_gulaku-gula-pasir-1-kg-x-12pcs_153129323512461120414.jpg" alt="Gulaku Gula Pasir 1 Kg">
+                    <div class="product-info">
+                        <h3>Gulaku Gula Pasir 1 Kg</h3>
+                        <p class="price">Rp 18.000</p>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Gulaku Gula Pasir 1 Kg" data-price="18000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="product-card" data-category="sembako">
+                    <img src="assets/agung_farm_telur_agung_farm_telur_ayam_negri_negeri_per_60_kg_curah_segar_dari_kandang_nkv_full01_s7tdgnuc.webp" alt="Telur Ayam Negeri Curah 1 Kg">
+                    <div class="product-info">
+                        <h3>Telur Ayam Negeri 1 Kg</h3>
+                        <p class="price">Rp 28.000</p>
+                        <button class="add-to-cart-btn" data-id="2" data-name="Telur Ayam Negeri 1 Kg" data-price="28000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="product-card" data-category="sembako">
+                    <img src="assets/minyak-goreng-fortune-2l.jpg" alt="Minyak Goreng Fortune 2L">
+                    <div class="product-info">
+                        <h3>Minyak Goreng Fortune 2L</h3>
+                        <p class="price">Rp 34.000</p>
+                        <button class="add-to-cart-btn" data-id="3" data-name="Minyak Goreng Fortune 2L" data-price="34000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="product-card" data-category="sembako">
+                    <img src="assets/minyak-goreng-minyakita-1l.jpg" alt="Minyak Goreng Minyakita 1L">
+                    <div class="product-info">
+                        <h3>Minyak Goreng Minyakita 1L</h3>
+                        <p class="price">Rp 15.000</p>
+                        <button class="add-to-cart-btn" data-id="4" data-name="Minyak Goreng Minyakita 1L" data-price="15000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="product-card" data-category="sembako">
+                    <img src="assets/minyakgoreng-bimoli-1l.png" alt="Minyak Goreng Bimoli 1L">
+                    <div class="product-info">
+                        <h3>Minyak Goreng Bimoli 1L</h3>
+                        <p class="price">Rp 20.000</p>
+                        <button class="add-to-cart-btn" data-id="5" data-name="Minyak Goreng Bimoli 1L" data-price="20000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="product-card" data-category="kopi-teh">
+                    <img src="assets/IndocafeCoffemixBag15sachetxKopiBubuk1_2b39622f-f944-40c1-aa16-ea781ca19464_900x900.jpeg" alt="Indocafe Coffeemix 15 Sachet">
+                    <div class="product-info">
+                        <h3>Indocafe Coffeemix (15 Sachet)</h3>
+                        <p class="price">Rp 18.000</p>
+                        <button class="add-to-cart-btn" data-id="6" data-name="Indocafe Coffeemix 15s" data-price="18000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="product-card" data-category="kopi-teh">
+                    <img src="assets/kapalapispecialmixsachet_c5cf71ba-ec18-4d45-9f8d-615c761a3205.webp" alt="Kopi Kapal Api Special Mix">
+                    <div class="product-info">
+                        <h3>Kopi Kapal Api Spc Mix (Renteng)</h3>
+                        <p class="price">Rp 13.000</p>
+                        <button class="add-to-cart-btn" data-id="7" data-name="Kopi Kapal Api Mix" data-price="13000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="product-card" data-category="kopi-teh">
+                    <img src="assets/kopi-sachet-gooday-capuccino-10pcs.jpg" alt="Good Day Cappuccino 10 Pcs">
+                    <div class="product-info">
+                        <h3>Good Day Cappuccino (10 Pcs)</h3>
+                        <p class="price">Rp 17.500</p>
+                        <button class="add-to-cart-btn" data-id="8" data-name="Good Day Cappuccino" data-price="17500">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="product-card" data-category="minuman">
+                    <img src="assets/SpriteBotol1000ml_ca93b757-cc19-475a-a127-cb8e712d4e08_900x900.png" alt="Sprite Botol 1L">
+                    <div class="product-info">
+                        <h3>Sprite Botol 1L</h3>
+                        <p class="price">Rp 12.000</p>
+                        <button class="add-to-cart-btn" data-id="9" data-name="Sprite Botol 1L" data-price="12000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="product-card" data-category="minuman">
+                    <img src="assets/fruit-tea_fruit-tea-blackcurrant-minuman-kemasan--500-ml--botol-_full02.webp" alt="Fruit Tea Blackcurrant 500ml">
+                    <div class="product-info">
+                        <h3>Fruit Tea Blackcurrant 500ml</h3>
+                        <p class="price">Rp 6.000</p>
+                        <button class="add-to-cart-btn" data-id="10" data-name="Fruit Tea Blackcurrant" data-price="6000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="product-card" data-category="minuman">
+                    <img src="assets/milku-susuuht-3rb.jpg" alt="Milku Susu UHT Coklat">
+                    <div class="product-info">
+                        <h3>Milku Susu UHT Coklat</h3>
+                        <p class="price">Rp 3.000</p>
+                        <button class="add-to-cart-btn" data-id="11" data-name="Milku Susu UHT Coklat" data-price="3000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="product-card" data-category="minuman">
+                    <img src="assets/teh-pucuk-harum.jpg" alt="Teh Pucuk Harum">
+                    <div class="product-info">
+                        <h3>Teh Pucuk Harum 350ml</h3>
+                        <p class="price">Rp 4.000</p>
+                        <button class="add-to-cart-btn" data-id="12" data-name="Teh Pucuk Harum" data-price="4000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 13 -->
+                <div class="product-card" data-category="minuman">
+                    <img src="assets/ultra_ultra_milk_minuman_susu_uht_250_ml_full04_oc5kkfg.webp" alt="Ultra Milk UHT 250ml">
+                    <div class="product-info">
+                        <h3>Ultra Milk UHT 250ml</h3>
+                        <p class="price">Rp 6.000</p>
+                        <button class="add-to-cart-btn" data-id="13" data-name="Ultra Milk 250ml" data-price="6000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 14 -->
+                <div class="product-card" data-category="cemilan">
+                    <img src="assets/Nabati%20Wafer%20Richeese.png" alt="Nabati Wafer Richeese">
+                    <div class="product-info">
+                        <h3>Nabati Wafer Richeese</h3>
+                        <p class="price">Rp 7.000</p>
+                        <button class="add-to-cart-btn" data-id="14" data-name="Nabati Wafer Richeese" data-price="7000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 15 -->
+                <div class="product-card" data-category="cemilan">
+                    <img src="assets/malkis-roma-cracker.jpg" alt="Roma Malkist Crackers">
+                    <div class="product-info">
+                        <h3>Roma Malkist Crackers</h3>
+                        <p class="price">Rp 8.000</p>
+                        <button class="add-to-cart-btn" data-id="15" data-name="Roma Malkist Crackers" data-price="8000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 16 -->
+                <div class="product-card" data-category="cemilan">
+                    <img src="assets/no_brand_camilan_snack_jajanan_keripik_kerupuk_pedas_200-250_gram_full02_360644e9.webp" alt="Keripik Pedas 250g">
+                    <div class="product-info">
+                        <h3>Keripik Pedas 250g</h3>
+                        <p class="price">Rp 12.000</p>
+                        <button class="add-to-cart-btn" data-id="16" data-name="Keripik Pedas 250g" data-price="12000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 17 -->
+                <div class="product-card" data-category="rokok">
+                    <img src="assets/8994214996452WismilakSlimKlikLycheeTeaKretekRokokBatang16stick_e89dfd65-054b-48bd-b1df-4192f6094411_900x900.jpg" alt="Wismilak Slim Klik Lychee Tea">
+                    <div class="product-info">
+                        <h3>Wismilak Slim Lychee 16s</h3>
+                        <p class="price">Rp 26.000</p>
+                        <button class="add-to-cart-btn" data-id="17" data-name="Wismilak Lychee Tea" data-price="26000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 18 -->
+                <div class="product-card" data-category="rokok">
+                    <img src="assets/Kretek_Sampoerna.jpg" alt="Sampoerna Kretek">
+                    <div class="product-info">
+                        <h3>Sampoerna Kretek (Bks)</h3>
+                        <p class="price">Rp 16.000</p>
+                        <button class="add-to-cart-btn" data-id="18" data-name="Sampoerna Kretek" data-price="16000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 19 -->
+                <div class="product-card" data-category="rokok">
+                    <img src="assets/rokok-filter-djarum-coklat.jpg" alt="Djarum Coklat Filter">
+                    <div class="product-info">
+                        <h3>Djarum Coklat Filter</h3>
+                        <p class="price">Rp 23.000</p>
+                        <button class="add-to-cart-btn" data-id="19" data-name="Djarum Coklat Filter" data-price="23000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 20 -->
+                <div class="product-card" data-category="rokok">
+                    <img src="assets/rokok-filter-gudang-garam.jpg" alt="Gudang Garam Filter">
+                    <div class="product-info">
+                        <h3>Gudang Garam Filter</h3>
+                        <p class="price">Rp 25.000</p>
+                        <button class="add-to-cart-btn" data-id="20" data-name="Gudang Garam Filter" data-price="25000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Item 21 -->
+                <div class="product-card" data-category="rokok">
+                    <img src="assets/rokok-kretek-camel.jpg" alt="Camel Kretek">
+                    <div class="product-info">
+                        <h3>Camel Kretek (Bks)</h3>
+                        <p class="price">Rp 15.000</p>
+                        <button class="add-to-cart-btn" data-id="21" data-name="Camel Kretek" data-price="15000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">🏪</span>
+                    Toko Sembako <span class="highlight">Teh Dewi</span>
+                </a>
+                <p class="footer-desc">Toko sembako terpercaya yang menyediakan berbagai kebutuhan harian dengan harga bersahabat dan pelayanan cepat.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#etalase">Etalase Produk</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kontak & Lokasi</h3>
+                <ul class="footer-contact">
+                    <li>📍 Jl. Raya Sembako No. 123</li>
+                    <li>📞 +62 812-3456-7890</li>
+                    <li>⏰ Buka Setiap Hari (07:00 - 21:00)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Toko Sembako Teh Dewi. Melayani dengan setulus hati.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Items will be injected here via JS -->
+            <p class="empty-cart-msg">Keranjang Anda masih kosong.</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Belanja:</span>
+                <span id="cartTotalPrice">Rp 0</span>
+            </div>
+            
+            <div class="checkout-form">
+                <input type="text" id="buyerName" placeholder="Nama Anda" required>
+                <textarea id="buyerAddress" placeholder="Alamat Pengiriman (Isi jika ingin diantar)" rows="2"></textarea>
+            </div>
+            
+            <button class="btn-checkout" id="checkoutBtn">Pesan via WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
