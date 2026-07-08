@@ -1,0 +1,29 @@
+/* Custom Styles & Animations */
+body {
+    background-color: #fffafb;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(255, 0, 144, 0.2);
+}
+
+.float-wa {
+    animation: bounce-soft 2s infinite;
+}
+
+@keyframes bounce-soft {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

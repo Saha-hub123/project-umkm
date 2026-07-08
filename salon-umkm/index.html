@@ -1,222 +1,463 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Salon | Premium Hair & Beauty</title>
+    <title>Hayuka Salon - Hair & Beauty</title>
+    <meta name="description"
+        content="Hayuka Hair & Beauty Salon melayani potong rambut, creambath, makeup, hingga rias pengantin di Cimahi.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#beranda" class="logo">Aura<span>Salon</span></a>
-            <ul class="nav-links">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#galeri">Galeri Model</a></li>
-                <li><a href="#pesan" class="btn-nav">Reservasi</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config to match logo colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hayuka: {
+                            light: '#ffd1e3', // Background pink dari logo
+                            DEFAULT: '#ff0090', // Warna magenta/hot pink dari tulisan logo
+                            dark: '#cc0073',
+                            bg: '#fff0f5' // Soft pink untuk background section
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-hayuka-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="https://raw.githubusercontent.com/GORILAPINK/hayuka-salon/main/h.png"
+                        alt="Hayuka Salon Logo" class="h-14 w-auto rounded-full border border-hayuka-light">
+                    <div class="ml-3 flex flex-col">
+                        <span class="font-cursive font-bold text-4xl text-hayuka leading-none">Hayuka</span>
+                        <span
+                            class="text-[10px] font-medium tracking-[0.2em] text-hayuka-dark uppercase mt-1">Salon</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-hayuka font-medium transition-colors">Beranda</a>
+                    <a href="#layanan" class="text-gray-600 hover:text-hayuka font-medium transition-colors">Layanan</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-hayuka font-medium transition-colors">Galeri</a>
+                    <a href="#lokasi" class="text-gray-600 hover:text-hayuka font-medium transition-colors">Lokasi</a>
+                    <a href="#kontak"
+                        class="bg-hayuka hover:bg-hayuka-dark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-md shadow-hayuka/30">Hubungi
+                        Kami</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-hayuka focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-hayuka-light">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-hayuka hover:bg-hayuka-light/30 rounded-md">Beranda</a>
+                <a href="#layanan"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-hayuka hover:bg-hayuka-light/30 rounded-md">Layanan</a>
+                <a href="#galeri"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-hayuka hover:bg-hayuka-light/30 rounded-md">Galeri</a>
+                <a href="#lokasi"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-hayuka hover:bg-hayuka-light/30 rounded-md">Lokasi</a>
+                <a href="#kontak"
+                    class="block px-3 py-2 text-base font-medium text-hayuka font-bold hover:bg-hayuka-light/30 rounded-md">Hubungi
+                    Kami</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="beranda" class="hero">
-        <div class="container hero-content">
-            <h1>Pancarkan Pesona<br>Terbaik Anda</h1>
-            <p>Nikmati perawatan rambut dan kecantikan premium dengan sentuhan profesional di Aura Salon. Waktu Anda untuk bersinar dimulai di sini.</p>
-            <a href="#pesan" class="btn-primary">Pesan Jadwal Sekarang</a>
+    <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-hayuka-bg relative overflow-hidden">
+        <!-- Decorative blobs -->
+        <div
+            class="absolute top-0 left-0 w-64 h-64 bg-hayuka-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-x-1/2 -translate-y-1/2">
         </div>
-        <div class="hero-overlay"></div>
-    </header>
+        <div
+            class="absolute bottom-0 right-0 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/3 translate-y-1/3">
+        </div>
 
-    <!-- Services Section -->
-    <section id="layanan" class="services section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Layanan Kami</h2>
-                <p>Perawatan eksklusif yang dirancang khusus untuk memenuhi kebutuhan kecantikan Anda.</p>
-            </div>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon">✂️</div>
-                    <h3>Potong Rambut & Styling</h3>
-                    <p>Konsultasi gaya dan potongan rambut presisi sesuai bentuk wajah.</p>
-                    <span class="price">Mulai Rp 50.000</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="px-8 w-full md:w-1/2 text-center md:text-left">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-hayuka-light text-hayuka-dark text-sm font-semibold mb-4 tracking-wide">Hair
+                        & Beauty Salon</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-6">
+                        Pancarkan Pesona <span class="text-hayuka">Cantikmu</span> Bersama Kami
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                        Hayuka Salon hadir untuk memberikan perawatan terbaik untuk rambut dan wajah Anda. Dari potong
+                        rambut, perawatan wajah, hingga rias pengantin, percayakan pada ahlinya.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#layanan"
+                            class="px-8 py-3 bg-white border-2 border-hayuka text-hayuka rounded-full font-semibold hover:bg-hayuka-light/20 transition-colors">
+                            Lihat Layanan
+                        </a>
+                        <a href="#kontak"
+                            class="px-8 py-3 bg-hayuka text-white rounded-full font-semibold hover:bg-hayuka-dark transition-colors shadow-lg shadow-hayuka/40 flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Reservasi via WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon">💆‍♀️</div>
-                    <h3>Creambath & Spa</h3>
-                    <p>Perawatan relaksasi untuk kulit kepala dan nutrisi rambut mendalam.</p>
-                    <span class="price">Mulai Rp 75.000</span>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Coloring & Highlight</h3>
-                    <p>Pewarnaan rambut premium dengan produk berkualitas tinggi.</p>
-                    <span class="price">Mulai Rp 200.000</span>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Smoothing & Keratin</h3>
-                    <p>Rambut lurus, lembut, dan berkilau tahan lama.</p>
-                    <span class="price">Mulai Rp 300.000</span>
-                </div>
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon">💅</div>
-                    <h3>Manicure & Pedicure</h3>
-                    <p>Perawatan kuku estetik untuk tangan dan kaki yang menawan.</p>
-                    <span class="price">Mulai Rp 60.000</span>
-                </div>
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-icon">💄</div>
-                    <h3>Make Up & Hairdo</h3>
-                    <p>Tata rias profesional untuk acara spesial Anda.</p>
-                    <span class="price">Mulai Rp 150.000</span>
+                <div class="w-full md:w-1/2 flex justify-center relative">
+                    <!-- Image wrapper with stylish border -->
+                    <div
+                        class="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-2 border-4 border-dashed border-hayuka">
+                        <img src="https://raw.githubusercontent.com/GORILAPINK/hayuka-salon/main/h.png"
+                            alt="Hayuka Salon"
+                            class="w-full h-full object-cover rounded-full shadow-2xl bg-hayuka-light">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="galeri" class="gallery section-padding bg-dark">
-        <div class="container">
-            <div class="section-title">
-                <h2>Galeri Model</h2>
-                <p>Inspirasi gaya rambut dari pelanggan terbaik kami.</p>
+    <section id="galeri" class="py-20 bg-hayuka-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Galeri Kami</h2>
+                <div class="w-24 h-1 bg-hayuka mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">Intip beberapa hasil karya dan momen perawatan pelanggan di Hayuka
+                    Salon.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 1">
-                    <div class="gallery-overlay"><span>Balayage</span></div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="https://github.com/GORILAPINK/hayuka-salon/blob/main/hairspha.png?raw=true"
+                        alt="Hair Styling"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Hair Spa</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 2">
-                    <div class="gallery-overlay"><span>Bob Styling</span></div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="https://github.com/GORILAPINK/hayuka-salon/blob/main/smoothing.png?raw=true" alt="Make Up"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Smoothing</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 3">
-                    <div class="gallery-overlay"><span>Classic Curl</span></div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="asset/haircolor.png" alt="Hair Color"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Hair Color</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 4">
-                    <div class="gallery-overlay"><span>Bridal Make Up</span></div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="https://github.com/GORILAPINK/hayuka-salon/blob/main/keratin.png?raw=true"
+                        alt="Facial & Totok Wajah"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Keratin</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 5">
-                    <div class="gallery-overlay"><span>Highlight</span></div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="https://github.com/GORILAPINK/hayuka-salon/blob/main/creambaht.png?raw=true"
+                        alt="Creambath"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Creambath</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Model Rambut 6">
-                    <div class="gallery-overlay"><span>Layer Cut</span></div>
+                <div class="group relative overflow-hidden rounded-2xl aspect-square shadow-sm">
+                    <img src="https://github.com/GORILAPINK/hayuka-salon/blob/main/makeup.png?raw=true"
+                        alt="Rias Pengantin"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-hayuka-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 md:p-6">
+                        <span class="text-white font-medium text-sm md:text-lg">Rias Pengantin</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section id="pesan" class="booking section-padding">
-        <div class="container">
-            <div class="booking-wrapper">
-                <div class="booking-content">
-                    <h2>Reservasi Jadwal</h2>
-                    <p>Booking jadwal perawatan Anda sekarang lebih mudah via WhatsApp. Silakan lengkapi form di samping, dan tim kami akan segera mengkonfirmasi.</p>
-                    <ul class="contact-info">
-                        <li>📍 Jl. Merdeka No. 123, Kota Cantik</li>
-                        <li>🕒 Senin - Minggu: 09:00 - 20:00</li>
-                        <li>📞 0812-3456-7890</li>
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Layanan Kami</h2>
+                <div class="w-24 h-1 bg-hayuka mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">Manjakan diri Anda dengan berbagai pilihan layanan kecantikan
+                    profesional di Hayuka Salon.</p>
+            </div>
+
+            <!-- Grid Layanan -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- Hair Care -->
+                <div
+                    class="service-card bg-hayuka-bg rounded-2xl p-8 border border-hayuka-light relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-white rounded-bl-full opacity-50 group-hover:scale-110 transition-transform">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm text-hayuka">
+                        <i data-lucide="scissors" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Perawatan Rambut</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Potong rambut + Cuci catok</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Cuci catok + Curly</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Creambath</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Masker rambut</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Cat rambut / Hair color</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="booking-form-container">
-                    <form id="bookingForm" class="booking-form">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Pilih Layanan Utama</label>
-                            <select id="service" required>
-                                <option value="" disabled selected>Pilih Layanan</option>
-                                <option value="Potong Rambut">Potong Rambut</option>
-                                <option value="Creambath/Spa">Creambath / Spa</option>
-                                <option value="Coloring">Coloring / Highlight</option>
-                                <option value="Smoothing">Smoothing / Keratin</option>
-                                <option value="Manicure/Pedicure">Manicure / Pedicure</option>
-                                <option value="Make Up/Hairdo">Make Up / Hairdo</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="date">Tanggal</label>
-                                <input type="date" id="date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="time">Waktu</label>
-                                <input type="time" id="time" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="notes">Catatan Tambahan (Opsional)</label>
-                            <textarea id="notes" rows="3" placeholder="Sebutkan jika ada model khusus atau alergi..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: text-bottom; margin-right: 5px;">
-                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                            </svg>
-                            Kirim Pesanan via WhatsApp
-                        </button>
-                    </form>
+
+                <!-- Face Care -->
+                <div
+                    class="service-card bg-hayuka-bg rounded-2xl p-8 border border-hayuka-light relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-white rounded-bl-full opacity-50 group-hover:scale-110 transition-transform">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm text-hayuka">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Perawatan Wajah</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Facial wajah</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Totok wajah</span>
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- Make up -->
+                <div
+                    class="service-card bg-hayuka-bg rounded-2xl p-8 border border-hayuka-light relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-24 h-24 bg-white rounded-bl-full opacity-50 group-hover:scale-110 transition-transform">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm text-hayuka">
+                        <i data-lucide="brush" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 font-serif">Tata Rias & Make Up</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Make up perpisahan</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span>Make up wisuda</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-hayuka shrink-0 mt-0.5"></i>
+                            <span class="font-semibold text-hayuka-dark">Rias pengantin</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="lokasi" class="py-20 bg-hayuka-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/3">
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Kunjungi Salon Kami</h2>
+                    <div class="w-16 h-1 bg-hayuka rounded-full mb-6"></div>
+                    <p class="text-gray-600 mb-8">
+                        Kami menantikan kedatangan Anda. Temukan lokasi kami dengan mudah menggunakan peta di samping.
+                    </p>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-hayuka-light mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-hayuka-light p-3 rounded-full text-hayuka shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Alamat Lengkap</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                                    Jl. Guna Bhakti 11 No.05,<br>
+                                    Cigugur Tengah, Kec. Cimahi Tengah,<br>
+                                    Kota Cimahi, Jawa Barat
+                                </p>
+                                <a href="https://maps.app.goo.gl/97aQcFas3ZuUYgAZ6" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 text-sm font-semibold text-hayuka hover:text-hayuka-dark transition-colors">
+                                    Buka di Google Maps <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="w-full lg:w-2/3 h-[400px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9161746200236!2d107.5521691749964!3d-6.892817193106203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5e7545f1fd7%3A0x2c5669aac3dea3ac!2sHayuka%20salon!5e0!3m2!1sid!2sid!4v1719782500000!5m2!1sid!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & WhatsApp Section -->
+    <section id="kontak" class="py-20 bg-hayuka-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+            <div class="w-24 h-1 bg-hayuka mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-600 text-lg mb-10">
+                Ada pertanyaan mengenai layanan kami atau ingin membuat janji temu? <br class="hidden sm:block">
+                Silakan hubungi admin kami melalui WhatsApp (tanpa sistem booking otomatis, langsung chat dengan kami).
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <!-- Temy -->
+                <a href="http://wa.me/6281322599969" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-4 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 hover:shadow-lg hover:border-green-400 transition-all group">
+                    <div
+                        class="bg-green-500 p-4 rounded-full text-white group-hover:scale-110 transition-transform shadow-md">
+                        <i data-lucide="phone" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Temy</h4>
+                        <p class="text-gray-600 font-medium">0813-2259-9969</p>
+                    </div>
+                </a>
+
+                <!-- Ira -->
+                <a href="http://wa.me/6282117025167" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-4 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200 hover:shadow-lg hover:border-green-400 transition-all group">
+                    <div
+                        class="bg-green-500 p-4 rounded-full text-white group-hover:scale-110 transition-transform shadow-md">
+                        <i data-lucide="phone" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Ira</h4>
+                        <p class="text-gray-600 font-medium">0821-1702-5167</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a href="#beranda" class="logo">Aura<span>Salon</span></a>
-                <p>Menghadirkan pesona terbaik dengan pelayanan premium untuk Anda yang istimewa.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Tautan Cepat</h3>
-                <ul>
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#galeri">Galeri</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Ikuti Kami</h3>
-                <div class="social-icons">
-                    <a href="#">IG</a>
-                    <a href="#">FB</a>
-                    <a href="#">TT</a>
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t-4 border-hayuka">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand Info -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="https://raw.githubusercontent.com/GORILAPINK/hayuka-salon/main/h.png" alt="Logo"
+                            class="w-10 h-10 rounded-full border-2 border-hayuka">
+                        <h3 class="text-3xl font-cursive font-bold text-white">Hayuka Salon</h3>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Hayuka Salon, solusi tepat untuk mempercantik diri dari ujung rambut hingga wajah.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-hayuka transition-colors">Beranda</a></li>
+                        <li><a href="#layanan" class="hover:text-hayuka transition-colors">Layanan Kami</a></li>
+                        <li><a href="#galeri" class="hover:text-hayuka transition-colors">Galeri</a></li>
+                        <li><a href="#lokasi" class="hover:text-hayuka transition-colors">Lokasi Salon</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Footer -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontak</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-hayuka shrink-0"></i>
+                            <span>Jl. Guna Bhakti 11 No.05, Cigugur Tengah, Kec. Cimahi Tengah, Kota Cimahi</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-hayuka shrink-0"></i>
+                            <span>Temy: 0813-2259-9969</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-hayuka shrink-0"></i>
+                            <span>Ira: 0821-1702-5167</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Aura Salon UMKM. All rights reserved.</p>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> Hayuka Salon. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Initialize Icons & Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
