@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenzo Ink - Official Store of Aftermost</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-zinc-800 antialiased">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <a href="#home" class="flex-shrink-0">
+            <img src="asset/logo-kenzo.png" alt="Kenzo Ink Logo" class="h-10 w-auto" />
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="#home" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Home</a>
+            <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">About</a>
+            <a href="#products" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Collections</a>
+            <a href="#shop" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Shop</a>
+            <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-zinc-300 hover:text-white focus:outline-none py-2" aria-label="Toggle Menu">
+              <i data-lucide="menu" class="w-7 h-7" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-zinc-900 border-b border-zinc-800 py-4 px-4 flex flex-col space-y-4 shadow-xl">
+        <a href="#home" class="mobile-link text-left text-lg font-medium text-zinc-300 hover:text-white">Home</a>
+        <a href="#about" class="mobile-link text-left text-lg font-medium text-zinc-300 hover:text-white">About Us</a>
+        <a href="#products" class="mobile-link text-left text-lg font-medium text-zinc-300 hover:text-white">Collections</a>
+        <a href="#shop" class="mobile-link text-left text-lg font-medium text-zinc-300 hover:text-white">Shop</a>
+        <a href="#contact" class="mobile-link text-left text-lg font-medium text-zinc-300 hover:text-white">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="asset/id-11134210-7qukx-lfexj9kvsmz17f.png" alt="Streetwear Background" class="w-full h-full object-cover object-bottom opacity-30" />
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <span class="text-zinc-400 uppercase tracking-[0.3em] text-sm md:text-base font-semibold mb-4 block">Bandung</span>
+        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-6 leading-none">Evolve Your<br />Style.</h1>
+        <p class="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl mx-auto font-light">Selamat datang di Kenzo Ink, official store dari koleksi pakaian Aftermost. Koleksi pakaian dengan karakter kuat, desain presisi, dan material terbaik untuk menemani gaya hidup urban Anda.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#products" class="px-8 py-4 bg-white text-zinc-950 font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            View Collections
+          </a>
+          <a href="#about" class="px-8 py-4 bg-transparent border border-zinc-500 text-white font-bold uppercase tracking-wider hover:border-white transition-colors w-full sm:w-auto text-center"> About Us </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-zinc-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div class="order-2 md:order-1 relative group aspect-square">
+            <div class="absolute -inset-2 bg-gradient-to-r from-zinc-700 to-zinc-900 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <img
+              src="asset/10-25-53.png"
+              alt="Kenzo Ink Production"
+              class="relative rounded-lg object-cover object-bottom w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">About Kenzo Ink & Aftermost</h2>
+            <div class="w-20 h-1 bg-white mb-8"></div>
+            <p class="text-lg text-zinc-400 leading-relaxed mb-6">Kenzo Ink adalah official store untuk brand Aftermost yang berdiri pada tahun 2021 di kota Bandung, kami berkomitmen untuk terus berinovasi dalam setiap produk yang kami hasilkan.</p>
+            <p class="text-lg text-zinc-400 leading-relaxed mb-6">Melalui eksplorasi mendalam pada konsep fashion, pemilihan material, detail aksesori, hingga presisi cutting, kami memastikan setiap koleksi memiliki karakter yang kuat.</p>
+            <p class="text-lg text-zinc-400 leading-relaxed">Didukung oleh riset berkelanjutan terhadap tren clothing global, kami selalu siap menghadirkan produk yang relevan dan adaptif dengan perkembangan zaman.</p>
+
+            <div class="mt-12 grid grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-4xl font-black text-white mb-2">2021</h4>
+                <p class="text-sm text-zinc-500 uppercase tracking-widest">EST.</p>
+              </div>
+              <div>
+                <h4 class="text-4xl font-black text-white mb-2">BDG</h4>
+                <p class="text-sm text-zinc-500 uppercase tracking-widest">AT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Showcase Section -->
+    <section id="products" class="py-24 bg-zinc-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="text-zinc-500 uppercase tracking-[0.2em] text-sm font-semibold mb-2 block">Our Catalog</span>
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">Latest Collections</h2>
+          <div class="w-16 h-1 bg-zinc-700 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden bg-zinc-800 rounded-xl mb-4 aspect-[4/5]">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <img
+                src="asset/xrqujbxrqujbxrqu.png"
+                alt="Aftermost Purple T-Shirt"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+            </div>
+            <div>
+              <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">T-Shirt</p>
+              <h3 class="text-lg font-bold text-zinc-200 group-hover:text-white transition-colors">Aftermost Purple T-Shirt</h3>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden bg-zinc-800 rounded-xl mb-4 aspect-[4/5]">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <img
+                src="asset/nqi3alnqi3alnqi3.png"
+                alt="Two Side Dramatic Aftermost"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+            </div>
+            <div>
+              <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">T-Shirt</p>
+              <h3 class="text-lg font-bold text-zinc-200 group-hover:text-white transition-colors">Two Side Dramatic Aftermost</h3>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden bg-zinc-800 rounded-xl mb-4 aspect-[4/5]">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <img
+                src="asset/2htyh02htyh02hty.png"
+                alt="Sweater Hoodie Zipper Risleting Sick Bordir"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+            </div>
+            <div>
+              <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">Hoodie</p>
+              <h3 class="text-lg font-bold text-zinc-200 group-hover:text-white transition-colors">Sweater Hoodie Zipper Risleting Sick</h3>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="group cursor-pointer">
+            <div class="relative overflow-hidden bg-zinc-800 rounded-xl mb-4 aspect-[4/5]">
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+              <img
+                src="asset/eb6xkbeb6xkbeb6x.png"
+                alt="Sweater Crewneck American Basic Aftermost"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+            </div>
+            <div>
+              <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">Sweater</p>
+              <h3 class="text-lg font-bold text-zinc-200 group-hover:text-white transition-colors">Sweater Crewneck American Basic Aftermost</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a href="#shop" class="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-zinc-300 font-bold uppercase tracking-wider hover:border-white hover:text-white transition-all rounded-full">
+            Discover More <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop/Marketplace Section -->
+    <section id="shop" class="py-24 bg-zinc-950 border-y border-zinc-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-zinc-500 uppercase tracking-[0.2em] text-sm font-semibold mb-2 block">Official Store</span>
+        <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-16">Dapatkan Koleksi Kami</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Shopee Card -->
+          <a
+            href="https://shopee.co.id/aftermoststreetwear"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-zinc-900/50 hover:bg-zinc-800 p-8 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center gap-6 hover:-translate-y-2 border border-zinc-800 hover:border-zinc-700"
+          >
+            <!-- Shopee SVG -->
+            <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
+              <svg class="w-full h-full" viewBox="0 0 50 50">
+                <path
+                  fill="#EE4D2D"
+                  d="M 25 1 C 19.672869 1 15.604123 5.9531422 15.166016 12 L 5.0585938 12 C 3.9235937 12 2.999376 12.980995 3.0625 14.113281 L 4.7871094 44.285156 C 4.9365844 46.922145 7.1369035 49 9.7773438 49 L 40.222656 49 C 42.863851 49 45.063433 46.921831 45.212891 44.285156 L 46.9375 14.115234 C 47.002643 12.982141 46.076406 12 44.941406 12 L 34.833984 12 C 34.395877 5.9531422 30.327131 1 25 1 z M 25 3 C 29.036936 3 32.408924 6.8867916 32.835938 12 L 17.164062 12 C 17.591075 6.8867916 20.963064 3 25 3 z M 25.080078 18 C 28.920078 18 31.799062 20.060938 32.039062 20.210938 L 31.009766 21.880859 C 30.759766 21.710859 30.310625 21.439844 30.140625 21.339844 C 29.120625 20.789844 27.240078 19.970703 25.080078 19.970703 C 21.830078 19.970703 19.480469 21.77 19.480469 24.25 C 19.480469 26.72 21.660234 27.699766 25.240234 29.009766 C 28.870234 30.329766 32.970703 31.829609 32.970703 36.599609 C 32.970703 40.189609 29.430156 43.009766 24.910156 43.009766 C 20.920156 43.009766 17.640078 40.560156 16.830078 39.910156 L 17.939453 38.259766 C 17.969453 38.289766 21.160156 41.029297 24.910156 41.029297 C 28.270156 41.029297 31 39.039609 31 36.599609 C 31 33.439609 28.570547 32.319375 24.560547 30.859375 C 21.260547 29.649375 17.509766 28.28 17.509766 24.25 C 17.509766 20.69 20.760078 18 25.080078 18 z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h3 class="text-2xl font-bold mb-1 text-zinc-300 group-hover:text-white">Shopee</h3>
+              <p class="text-sm text-zinc-500 group-hover:text-zinc-400">@aftermoststreetwear</p>
+            </div>
+            <span class="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-600 group-hover:text-white transition-colors"> Kunjungi Toko <i data-lucide="external-link" class="w-3.5 h-3.5"></i> </span>
+          </a>
+
+          <!-- TikTok Shop Card -->
+          <a
+            href="https://vt.tiktok.com/ZS96xRchDcCCr-5OD7a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-zinc-900/50 hover:bg-zinc-800 p-8 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center gap-6 hover:-translate-y-2 border border-zinc-800 hover:border-zinc-700"
+          >
+            <!-- TikTok Shop SVG -->
+            <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-500 text-zinc-400 group-hover:text-white">
+              <svg class="w-14 h-14" viewBox="0 0 1063 1155" fill="currentColor">
+                <g>
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="m704.17 170.42c153.2 0 136.11 41.22 155.26 171.05 13.81 93.58 22.13 190.41 34.99 284.67 11.64 85.35 37.9 186.75-57.25 236.66-47.64 25-241.73 13.52-306.14 13.52-300.51 0-409.98 43.57-366.67-253.46 13.67-93.81 23.41-190.72 34.96-284.69 15.68-127.65 5.44-167.34 151.9-167.75 0-225.19 352.95-227.04 352.95 0zm-86.57 0c0-122.34-179.8-125.08-179.8 0z"
+                  />
+                  <path
+                    fill="#ec2b89"
+                    d="m727.48 431.75c-55.16 0-99.87-44.71-99.87-99.87h-74.9v289.9c0 33.71-27.32 61.03-61.03 61.03-33.71 0-61.04-27.32-61.04-61.03 0.01-33.7 27.33-61.03 61.04-61.03 6.32 0 13.48 0.96 19.21 2.74v-76.3q-9.42-1.33-19.21-1.34c-75.08 0-135.94 60.86-135.94 135.93 0 75.08 60.86 135.94 135.94 135.94 75.07 0 135.93-60.86 135.93-135.94v-153.43c27.23 22.21 62 35.53 99.87 35.53z"
+                  />
+                  <path
+                    fill="#00efe8"
+                    d="m706.27 410.53c-55.16 0-99.88-44.71-99.88-99.87h-74.9v289.9c0 33.71-27.32 61.03-61.03 61.03-33.71 0-61.03-27.32-61.03-61.03 0-33.7 27.32-61.03 61.03-61.03 6.32 0 13.48 0.96 19.22 2.75v-76.3q-9.43-1.34-19.22-1.35c-75.08 0-135.94 60.86-135.94 135.93 0 75.08 60.86 135.94 135.94 135.94 75.07 0 135.93-60.86 135.93-135.94l0.01-153.43c27.22 22.21 61.98 35.53 99.87 35.53z"
+                  />
+                  <!-- Background cutout transition when hovered (berubah warna background di dalam logo agar blending) -->
+                  <path
+                    class="fill-zinc-900 group-hover:fill-zinc-800 transition-colors duration-500"
+                    d="m706.27 429.47c-24.15-5.22-45.04-19.17-59.21-38.38-19.22-14.18-33.16-35.06-38.39-59.21h-55.96v289.9c0 33.71-27.32 61.03-61.03 61.03-22.3 0-41.79-11.96-52.44-29.81-17.85-10.65-29.81-30.14-29.81-52.44 0-33.7 27.32-61.03 61.03-61.03 6.32 0 13.48 0.96 19.22 2.75v-56.41c-74.15 1.07-133.94 61.51-133.94 135.91 0 32.13 11.16 61.66 29.8 84.92 23.26 18.64 52.79 29.8 84.92 29.8 75.07 0 135.93-60.86 135.93-135.94l0.01-153.43c27.22 22.21 61.98 35.53 99.87 35.53z"
+                  />
+                  <path fill="currentColor" d="m146.28 985.78c0 9.64-7.81 17.45-17.44 17.45-9.64 0-17.45-7.81-17.45-17.45 0-9.63 7.81-17.44 17.45-17.44 9.63 0 17.44 7.81 17.44 17.44z" />
+                  <path fill="currentColor" d="m0.25 970.55h105.31l-9.58 29.49h-27.28v110.58h-34.54v-110.58h-33.91z" />
+                  <path fill="currentColor" d="m279.9 970.55h105.31l-9.58 29.49h-27.28v110.58h-34.54v-110.58h-33.91z" />
+                  <path fill="currentColor" d="m111.56 1110.62h34.55v-94.36h-34.55z" />
+                  <path fill="currentColor" d="m225.95 1044.33l-0.48-0.12 43.01-44.05h-41.9l-31.68 31.69v-61.3h-34.55v140.07h34.55v-35.09l9.2-9.43 31.73 44.52h37.76z" />
+                  <path fill="currentColor" d="m586.43 1044.33l-0.48-0.12 43.01-44.05h-41.9l-31.68 31.69v-61.3h-34.54v140.07h34.54v-35.09l9.2-9.43 31.73 44.52h37.77z" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="m500.93 1054.1c0 32.57-26.4 58.97-58.97 58.97-32.57 0-58.98-26.4-58.98-58.97 0-32.57 26.41-58.98 58.98-58.98 32.57 0 58.97 26.41 58.97 58.98zm-29.96 0c0-16.02-12.99-29.01-29.01-29.01-16.02 0-29.01 12.99-29.01 29.01 0 16.02 12.99 29.01 29.01 29.01 16.02 0 29.01-12.99 29.01-29.01z"
+                  />
+                  <path fill="#00efe8" d="m382.98 1054.1c0-30.62 23.35-55.79 53.2-58.69q-2.85-0.28-5.77-0.29c-32.57 0-58.97 26.41-58.97 58.98 0 32.57 26.4 58.97 58.97 58.97q2.92 0 5.77-0.28c-29.85-2.9-53.2-28.07-53.2-58.69z" />
+                  <path fill="#ec2b89" d="m451.3 995.12q-2.36 0.02-4.67 0.21c30.39 2.38 54.3 27.77 54.3 58.77 0 31-23.91 56.39-54.3 58.77q2.31 0.19 4.67 0.2c32.57 0 58.97-26.4 58.97-58.97 0-32.57-26.4-58.98-58.97-58.98z" />
+                  <path
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-miterlimit="2.61313"
+                    fill-rule="evenodd"
+                    d="m704.19 1110.91q-11.59 0-23.54-2.52-11.96-2.52-19.24-5.88l2.43-18.87q9.34 4.48 21.11 7.85 11.76 3.36 23.35 3.36 13.07 0 20.27-4.77 7.19-4.76 7.19-14.29 0-7.1-3.64-11.86-3.65-4.76-10.65-8.03-7.01-3.27-19.53-7.01-12.7-3.74-21.11-8.03-8.4-4.3-13.54-11.77-5.14-7.47-5.14-18.87 0-15.88 12.24-25.59 12.24-9.72 34.47-9.72 11.95 0 22.69 2.62 10.75 2.61 18.78 6.35l-1.87 18.87q-10.46-6.17-20.17-8.97-9.72-2.8-20.18-2.8-12.14 0-19.33 4.48-7.2 4.49-7.2 13.83 0 6.35 3.27 10.46 3.27 4.11 9.44 7 6.16 2.9 17.18 6.26 22.05 6.73 32.88 15.98 10.84 9.24 10.84 25.49 0 17.19-12.89 26.81-12.89 9.62-38.11 9.62zm110.78-96.02q17.37 0 26.52 11.4 9.16 11.39 9.16 31.01v51h-16.81v-48.95q0-15.13-5.52-22.32-5.51-7.19-17.09-7.19-7.1 0-13.08 3.27-5.97 3.27-10.08 9.24v65.95h-17v-140.11h17v57.35q5.41-5.23 11.86-7.94 6.44-2.71 15.04-2.71zm97.51 95.28q-14.01 0-24.28-6.26-10.28-6.26-15.69-17.1-5.42-10.83-5.42-24.28 0-13.45 5.42-24.29 5.41-10.83 15.69-17.09 10.27-6.26 24.28-6.26 13.83 0 24.2 6.26 10.36 6.26 15.78 17.09 5.42 10.84 5.42 24.29 0 13.45-5.42 24.28-5.42 10.84-15.78 17.1-10.37 6.26-24.2 6.26zm0-14.95q13.45 0 20.83-8.59 7.38-8.6 7.38-24.1 0-15.51-7.38-24.1-7.38-8.59-20.83-8.59-13.45 0-20.83 8.59-7.37 8.59-7.38 24.1 0.01 15.5 7.38 24.1 7.38 8.59 20.83 8.59zm109.29-80.33q12.14 0 21.2 6.26 9.06 6.26 13.92 17.09 4.86 10.84 4.86 24.29 0 13.64-4.58 24.38-4.58 10.74-13.54 17-8.97 6.26-21.86 6.26-9.53 0-17.37-3.37-7.85-3.36-12.33-9.71v56.42h-16.82v-136.75h13.08l1.87 12.7q11.58-14.57 31.57-14.57zm-3.18 80.33q12.15 0 19.06-8.69 6.91-8.68 6.91-24 0-15.32-6.91-24.01-6.91-8.68-19.06-8.68-11.95 0-19.71 8.4-7.75 8.41-7.75 24.29 0 16.44 7.66 24.56 7.66 8.13 19.8 8.13z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h3 class="text-2xl font-bold mb-1 text-zinc-300 group-hover:text-white">TikTok Shop</h3>
+              <p class="text-sm text-zinc-500 group-hover:text-zinc-400">@aftermost</p>
+            </div>
+            <span class="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-600 group-hover:text-white transition-colors"> Kunjungi Toko <i data-lucide="external-link" class="w-3.5 h-3.5"></i> </span>
+          </a>
+
+          <!-- Lazada Card -->
+          <a
+            href="https://s.lazada.co.id/s.Pbgtt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-zinc-900/50 hover:bg-zinc-800 p-8 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center gap-6 hover:-translate-y-2 border border-zinc-800 hover:border-zinc-700"
+          >
+            <!-- Lazada SVG -->
+            <div class="w-32 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
+              <svg class="w-full h-auto" viewBox="0 0 410.28354 107.51025">
+                <defs>
+                  <linearGradient id="lazada-grad1" y2="0.49999899" x2="1.00081" y1="0.49999899" x1="-0.00059854198" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ff9200" offset="1e-07" />
+                    <stop stop-color="#f36d00" offset="0.29" />
+                    <stop stop-color="#f4680b" offset="0.32" />
+                    <stop stop-color="#f83c72" offset="0.57" />
+                    <stop stop-color="#fc1cbe" offset="0.78" />
+                    <stop stop-color="#fe08ed" offset="0.93" />
+                    <stop stop-color="#ff00ff" offset="1" />
+                  </linearGradient>
+                  <linearGradient id="lazada-grad2" x1="-0.00059854198" y1="0.49999899" x2="1.00081" y2="0.49999899" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ff9200" offset="1e-07" />
+                    <stop stop-color="#f36d00" offset="0.33755317" />
+                    <stop stop-color="#f83c72" offset="0.56728965" />
+                    <stop stop-color="#fc1cbe" offset="0.78" />
+                    <stop stop-color="#fe08ed" offset="0.93" />
+                    <stop stop-color="#ff00ff" offset="1" />
+                  </linearGradient>
+                  <linearGradient id="lazada-grad3" x1="18.75388" y1="49.006153" x2="86.817642" y2="11.319839" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ee0a3f" offset="0" />
+                    <stop stop-color="#ee0a3f" stop-opacity="0" offset="1" />
+                  </linearGradient>
+                  <linearGradient id="lazada-grad4" x1="41.793034" y1="39.348598" x2="75.037086" y2="12.568669" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ed6600" offset="0" />
+                    <stop stop-color="#f98200" offset="1" />
+                  </linearGradient>
+                  <linearGradient href="#lazada-grad1" id="lazada-grad5" gradientUnits="userSpaceOnUse" x1="-0.00059854198" y1="0.49999899" x2="1.00081" y2="0.49999899" />
+                  <linearGradient href="#lazada-grad2" id="lazada-grad6" gradientUnits="userSpaceOnUse" x1="-0.00059854198" y1="0.49999899" x2="66.758224" y2="-0.017084641" />
+                </defs>
+                <g transform="translate(805.60654,100.39806)">
+                  <g transform="translate(-482.6338,-315.5882)">
+                    <g transform="matrix(0.43272125,0,0,0.43272125,12.094952,193.20654)">
+                      <g transform="matrix(0.26296827,0,0,0.26296827,-799.54693,61.582129)" style="fill: #000083; fill-rule: evenodd; stroke: none">
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path style="vector-effect: none; fill: white; fill-rule: nonzero" d="m 90.4468,6.62439 h 6.5288 V 38.039 H 108.23 V 44.24 H 90.4741 L 90.4468,6.62439" />
+                        </g>
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path
+                            style="vector-effect: none; fill: white; fill-rule: nonzero"
+                            d="m 123.35,16.0488 c 3.459,-0.0433 6.738,1.5334 8.865,4.2614 v -3.7014 h 6.091 v 27.6858 h -6.091 v -3.7014 c -2.127,2.728 -5.406,4.3047 -8.865,4.2614 -7.594,0 -13.358,-6.4878 -13.358,-14.4097 0,-7.922 5.764,-14.3961 13.358,-14.3961 m 1.107,5.5453 c -4.931,0 -8.196,3.8791 -8.196,8.8508 0,4.9717 3.319,8.8644 8.196,8.8644 4.876,0 8.195,-3.8791 8.195,-8.8644 0,-4.9854 -3.265,-8.8508 -8.195,-8.8508"
+                          />
+                        </g>
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path style="vector-effect: none; fill: white; fill-rule: nonzero" d="m 143.046,39.4868 14.519,-17.3463 h -14.301 v -5.5317 h 22.168 v 4.8761 l -14.464,17.278 h 14.792 v 5.5317 h -22.714 v -4.8078" />
+                        </g>
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path
+                            style="vector-effect: none; fill: white; fill-rule: nonzero"
+                            d="m 181.249,16.0488 c 3.458,-0.0433 6.738,1.5334 8.864,4.2614 v -3.7014 h 6.092 v 27.6858 h -6.092 v -3.7014 c -2.126,2.728 -5.406,4.3047 -8.864,4.2614 -7.594,0 -13.345,-6.4878 -13.345,-14.4097 0,-7.922 5.751,-14.3961 13.345,-14.3961 m 1.106,5.5453 c -4.931,0 -8.195,3.8791 -8.195,8.8508 0,4.9717 3.319,8.8644 8.195,8.8644 4.876,0 8.195,-3.8791 8.195,-8.8644 0,-4.9854 -3.264,-8.8508 -8.195,-8.8508"
+                          />
+                        </g>
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path
+                            style="vector-effect: none; fill: white; fill-rule: nonzero"
+                            d="m 213.606,16.0488 c 3.455,-0.0454 6.731,1.5322 8.851,4.2614 V 4.39805 h 6.091 V 44.2946 h -6.091 v -3.7014 c -2.12,2.7292 -5.396,4.3068 -8.851,4.2614 -7.594,0 -13.358,-6.4878 -13.358,-14.4097 0,-7.922 5.764,-14.3961 13.358,-14.3961 m 1.106,5.5453 c -4.931,0 -8.195,3.8791 -8.195,8.8508 0,4.9717 3.333,8.8644 8.195,8.8644 4.863,0 8.195,-3.8791 8.195,-8.8644 0,-4.9854 -3.264,-8.8508 -8.195,-8.8508"
+                          />
+                        </g>
+                        <g transform="matrix(12.509277,0,0,12.509277,438.06846,8.29825)">
+                          <path
+                            style="vector-effect: none; fill: white; fill-rule: nonzero"
+                            d="m 245.949,16.0488 c 3.455,-0.0454 6.732,1.5322 8.851,4.2614 v -3.7014 h 6.078 v 27.6858 h -6.105 v -3.7014 c -2.12,2.7292 -5.396,4.3068 -8.851,4.2614 -7.594,0 -13.358,-6.4878 -13.358,-14.4097 0,-7.922 5.791,-14.3961 13.385,-14.3961 m 1.107,5.5453 c -4.931,0 -8.196,3.8791 -8.196,8.8508 0,4.9717 3.333,8.8644 8.196,8.8644 4.862,0 8.195,-3.8791 8.195,-8.8644 0,-4.9854 -3.265,-8.8508 -8.195,-8.8508"
+                          />
+                        </g>
+                      </g>
+                      <g transform="matrix(1.3719271,0,0,1.3719271,169.4857,-38.493576)">
+                        <g style="fill: url(#lazada-grad5); fill-rule: evenodd; stroke: none" transform="matrix(3.3097462,0,0,3.3097462,-688.02908,65.088537)">
+                          <path
+                            style="vector-effect: none; fill: url(#lazada-grad6); fill-rule: nonzero"
+                            d="M 33.7366,54.7161 C 33.2581,54.7194 32.7871,54.5969 32.3707,54.361 28.8059,52.2985 2.4039,35.7444 1.40683,35.239 0.648025,34.8849 0.129878,34.1595 0.0409756,33.3268 V 10.1073 C 0.0213409,9.24058 0.449817,8.42493 1.17463,7.94927 L 1.36585,7.84 C 3.92,6.25561 12.4702,1.03805 13.8224,0.286829 14.1327,0.102692 14.4861,0.00374668 14.8468,0 c 0.3382,0.00382664 0.6706,0.0881007 0.9698,0.245854 0,0 11.9649,7.799026 13.7951,8.495606 1.2842,0.59 2.6845,0.88406 4.0976,0.86049 1.6012,0.03347 3.1834,-0.35265 4.5892,-1.12 C 40.0878,7.53951 51.52,0.286829 51.6429,0.286829 51.9311,0.112743 52.2623,0.0228451 52.599,0.0273171 52.9601,0.0290843 53.3139,0.128172 53.6234,0.314146 55.1805,1.17463 65.7795,7.66244 66.2302,7.94927 66.9757,8.39902 67.4276,9.20946 67.4185,10.08 v 23.2195 c -0.0836,0.8347 -0.6034,1.5624 -1.3658,1.9122 -0.9971,0.5463 -27.3171,17.1005 -30.9503,19.122 -0.4136,0.2455 -0.8848,0.3774 -1.3658,0.3824"
+                          />
+                        </g>
+                        <g style="fill: url(#lazada-grad3); fill-opacity: 1; fill-rule: evenodd; stroke: none" transform="matrix(3.3097462,0,0,3.3097462,-688.02908,65.088537)">
+                          <path
+                            style="vector-effect: none; fill: url(#lazada-grad3); fill-opacity: 1; fill-rule: nonzero"
+                            d="m 33.6,54.7162 0.1366,-1e-4 c 0.4785,0.0033 0.9495,-0.1192 1.3658,-0.3551 3.5649,-2.0625 29.9532,-18.6166 30.9503,-19.122 0.7624,-0.3498 1.2822,-1.0775 1.3658,-1.9122 V 10.1073 C 67.4229,9.71423 67.334,9.32571 67.159,8.97366 L 33.6,27.399 v 27.3172"
+                          />
+                        </g>
+                        <g transform="matrix(-3.2744849,0,0,3.2744849,-467.18522,65.934126)" style="fill: url(#lazada-grad4); fill-opacity: 1; fill-rule: evenodd; stroke: none">
+                          <path
+                            d="m 33.6,54.7162 0.1366,-1e-4 c 0.4785,0.0033 0.9495,-0.1192 1.3658,-0.3551 3.5649,-2.0625 29.9532,-18.6166 30.9503,-19.122 0.7624,-0.3498 1.2822,-1.0775 1.3658,-1.9122 V 10.1073 C 67.4229,9.71423 67.334,9.32571 67.159,8.97366 L 33.6,27.399 v 27.3172"
+                            style="vector-effect: none; fill: url(#lazada-grad4); fill-opacity: 1; fill-rule: nonzero"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h3 class="text-2xl font-bold mb-1 text-zinc-300 group-hover:text-white">Lazada</h3>
+              <p class="text-sm text-zinc-500 group-hover:text-zinc-400">@aftermost</p>
+            </div>
+            <span class="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-zinc-600 group-hover:text-white transition-colors"> Kunjungi Toko <i data-lucide="external-link" class="w-3.5 h-3.5"></i> </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-zinc-950 pt-24 pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <!-- Brand Info -->
+          <div class="lg:col-span-2">
+            <img src="asset/logo-kenzo.png" alt="Kenzo Ink Logo" class="w-16 mb-6" />
+            <p class="text-zinc-400 mb-8 max-w-md">Kenzo Ink - Official Store of Aftermost. Clothing brand inovatif dari Bandung. Karakter kuat, material premium, dan selalu adaptif dengan tren global.</p>
+            <div class="flex items-start gap-3 text-zinc-400 mb-4">
+              <i data-lucide="map-pin" class="w-6 h-6 flex-shrink-0 text-white mt-1"></i>
+              <p class="leading-relaxed">
+                Kampung Sayuran No.74, RT.04/RW.07,<br />
+                Cijerah, Kec. Bandung Kulon,<br />
+                Kota Bandung, Jawa Barat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-6">Navigasi</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#home" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Home</a>
+              </li>
+              <li>
+                <a href="#about" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> About Us</a>
+              </li>
+              <li>
+                <a href="#products" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Collections</a>
+              </li>
+              <li>
+                <a href="#shop" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Marketplaces</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Connect -->
+          <div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-6">Hubungi Kami</h3>
+            <a href="https://wa.me/682121386834" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-zinc-950 px-6 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors mb-8">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              Hubungi WhatsApp
+            </a>
+
+            <div class="flex gap-4">
+              <!-- Instagram (Inline SVG) -->
+              <a href="https://www.instagram.com/kenzoinktattoo_/" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 p-3 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors" aria-label="Instagram">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- TikTok -->
+              <a
+                href="https://www.tiktok.com/@kenzoinktattoo_"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-zinc-900 p-3 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+                aria-label="TikTok"
+              >
+                <!-- TikTok Custom Icon -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube (Inline SVG) -->
+              <a
+                href="https://www.youtube.com/@kenzoinktattoo7120"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-zinc-900 p-3 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+                aria-label="YouTube"
+              >
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-500 text-sm">
+          <p>&copy; <span id="year"></span> Kenzo Ink. All rights reserved.</p>
+          <p>Bandung, Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vanilla JavaScript Logic -->
+    <script src="main.js"></script>
+  </body>
+</html>
