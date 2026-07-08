@@ -4,3 +4,4 @@ Repositori ini berisi beberapa project website umkm sederhana. Berikut adalah da
 
 - 🥤: [Website Cendol UMKM](https://cendol-sipoer.netlify.app/)
 - 🏪 [Website Sembako Teh Dewi](https://sembako-tehdewi.netlify.app/)
+- 👕 [Website Distro Kenzo Ink - Aftermost](https://aftermost.netlify.app/)
